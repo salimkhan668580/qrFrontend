@@ -25,12 +25,12 @@ function AddUser() {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    const res=await axios.post('http://localhost:3000/addUser', formData)
-    if(res.status===200){
+    // const res=await axios.post('http://localhost:3000/addUser', formData)
+    // if(res.status===200){
       const qrText = `Name: ${formData.name}\nCompany: ${formData.company}\nRole: ${formData.role}\nEmergency Contact: ${formData.emergencyContactNo}`;
 
     console.log(qrText)
-    const url = await QRCode.toDataURL(qrText);
+    // const url = await QRCode.toDataURL(qrText);
 console.log("Your QR code URL:", url)
     setQrCodeUrl(url);
     
@@ -42,7 +42,7 @@ console.log("Your QR code URL:", url)
         emergencyContactNo: ""
       })
 
-    }
+    // }
 
   };
   return (
