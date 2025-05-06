@@ -29,9 +29,9 @@ function AddUser() {
     // if(res.status===200){
       const qrText = `Name: ${formData.name}\nCompany: ${formData.company}\nRole: ${formData.role}\nEmergency Contact: ${formData.emergencyContactNo}`;
 
-    console.log(qrText)
-    // const url = await QRCode.toDataURL(qrText);
-console.log("Your QR code URL:", url)
+    // console.log(qrText)
+    const url = await QRCode.toDataURL(qrText);
+// console.log("Your QR code URL:", url)
     setQrCodeUrl(url);
     
       // alert('User added successfully')
